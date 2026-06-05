@@ -1,0 +1,126 @@
+
+/* Hermes Pro Layout Deep Fix Patch */
+:root {
+  --fix-padding: 24px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   主区域容器样式
+   ═══════════════════════════════════════════════════════════ */
+.app-container > section, 
+.app-container > main.workspace-view,
+.soft-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  height: calc(100vh - 40px) !important;
+  margin: 20px 10px !important;
+  background: linear-gradient(180deg, rgba(255, 251, 246, 0.9), rgba(244, 226, 213, 0.8)), #fff !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+  padding: var(--fix-padding) !important;
+  overflow: hidden !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   双栏网格布局（记忆页、资料库、笔记页等）
+   强制规整的上下排布 + 等高双栏
+   ═══════════════════════════════════════════════════════════ */
+.view-grid,
+.soft-panel .grid-cols-2,
+.soft-panel .grid.grid-cols-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr !important;
+  gap: 16px !important;
+  min-height: 0 !important;
+  flex: 1 !important;
+  overflow: hidden !important;
+}
+
+/* 网格内每个子区块 */
+.soft-panel .grid-cols-2 > div,
+.soft-panel .grid.grid-cols-2 > div,
+.view-grid > div {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  background: rgba(255,255,255,0.5) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  padding: 12px !important;
+}
+
+/* 网格子区块内的滚动区域 */
+.soft-panel .grid-cols-2 > div .scrollbar-thin,
+.soft-panel .grid-cols-2 > div .overflow-auto,
+.soft-panel .grid-cols-2 > div ul,
+.soft-panel .grid-cols-2 > div ol,
+.view-grid > div .scrollbar-thin,
+.view-grid > div .overflow-auto {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  min-height: 0 !important;
+}
+
+/* textarea 在记忆页面中自适应高度 */
+.soft-panel textarea {
+  flex: 1 !important;
+  min-height: 80px !important;
+  max-height: 100% !important;
+  resize: vertical !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   内部卡片样式
+   ═══════════════════════════════════════════════════════════ */
+.anime-card {
+  background: rgba(255,255,255,0.5) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 列表滚动区高度修正 */
+.scrollbar-thin {
+  flex: 1 !important;
+  overflow-y: auto !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   响应式：窄屏幕转单栏
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .view-grid,
+  .soft-panel .grid-cols-2,
+  .soft-panel .grid.grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   黑暗模式适配
+   ═══════════════════════════════════════════════════════════ */
+body.dark .app-container > section,
+body.dark .app-container > main.workspace-view,
+body.dark .soft-panel {
+  background: rgba(30, 30, 35, 0.8) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: #eee !important;
+}
+
+body.dark .soft-panel .grid-cols-2 > div,
+body.dark .soft-panel .grid.grid-cols-2 > div,
+body.dark .view-grid > div {
+  background: rgba(40, 40, 48, 0.6) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}

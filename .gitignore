@@ -1,0 +1,30 @@
+# Dependency directories
+node_modules/
+
+# Python runtime environment & package cache
+python_runtime/
+python_runtime_mac_arm64/
+pip_cache/
+
+# Large package archive
+hermes_usb.rar
+
+# Local cache, temporary files, and logs
+.claude/
+.downloads/
+tmp/
+scratch/
+data/logs/
+data/gateway.pid
+data/auth.lock
+
+# User configuration & dynamic database
+data/.env
+data/license.key
+data/state.db
+data/local_mounts.json
+data/sessions/
+data/sessions.json
+data/memories/
+data/weixin/
+data/security-log.jsonl

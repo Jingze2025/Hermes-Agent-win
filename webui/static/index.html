@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>京择AGI-Hermes - 智能体控制台</title>
+  <meta name="description" content="京择AGI-Hermes 便捷式 AI Agent 可视化控制面板">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ═══ Sidebar ═══ -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <img src="logo.png" style="width:36px;height:36px;border-radius:var(--radius-md);object-fit:cover;">
+          <div class="logo-text">京择AGI-Hermes</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">主菜单</div>
+
+        <div class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">📊</span>
+          <span>仪表盘</span>
+        </div>
+
+        <div class="nav-item" data-page="chat">
+          <span class="nav-icon">💭</span>
+          <span>AI 会话</span>
+        </div>
+
+        <div class="nav-item" data-page="models">
+          <span class="nav-icon">🤖</span>
+          <span>模型配置</span>
+        </div>
+
+        <div class="nav-item" data-page="channels">
+          <span class="nav-icon">💬</span>
+          <span>IM 渠道</span>
+        </div>
+
+        <div class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙️</span>
+          <span>系统设置</span>
+        </div>
+
+        <div class="nav-item" data-page="mounts">
+          <span class="nav-icon">📁</span>
+          <span>本地目录</span>
+        </div>
+
+        <div class="nav-section-title">工具</div>
+
+        <div class="nav-item" data-page="workspace">
+          <span class="nav-icon">🗂️</span>
+          <span>工作区</span>
+        </div>
+
+        <div class="nav-item" data-page="skills">
+          <span class="nav-icon">🧩</span>
+          <span>技能仓库</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-indicator">
+          <span class="status-dot offline" id="sidebar-status-dot"></span>
+          <span id="sidebar-status-text">加载中...</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══ Main Content ═══ -->
+    <main class="main-content">
+      <div class="page-container" id="page-content">
+        <div style="display:flex;align-items:center;justify-content:center;height:60vh">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
