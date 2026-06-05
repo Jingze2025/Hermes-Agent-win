@@ -1,0 +1,33 @@
+# 软件许可及非商业使用协议 (Software License and Non-Commercial Use Agreement)
+
+## 中文版 (Chinese Version)
+
+本软件及相关源代码以“源码可用 (Source Available)”的形式提供。您在遵守以下条款的前提下，可以免费使用、修改本软件。
+
+### 1. 许可授予 (License Grant)
+- **个人与非商业用途**：允许个人、学术研究及非商业性教育或公益机构出于学习、研究和非商业目的免费使用、修改和分发本软件。
+- **禁止商业用途**：**严禁将本软件或其任何部分（包括修改后的版本）用于任何商业目的。** 商业目的包括但不限于：
+  - 销售、出租或以其他方式对本软件或其衍生版本进行收费。
+  - 在商业性产品、服务或企业内部业务中使用本软件以获取直接或间接的经济利益。
+  - 将本软件作为有偿技术服务、SaaS 服务或商业支持的一部分提供给第三方。
+
+### 2. 商业授权 (Commercial Licensing)
+如需将本软件用于任何商业用途，必须事先联系作者并获得明确的**书面授权协议**。
+- **联系作者**：您可以通过 GitHub 仓库主页、提交 Issue / Pull Request，或通过个人资料页面的联系方式与作者取得联系以获取商用授权。
+
+---
+
+## English Version
+
+This software and its source code are provided under a "Source Available" model. You may use, modify, and distribute this software free of charge subject to the following conditions.
+
+### 1. License Grant
+- **Personal and Non-Commercial Use**: Free use, modification, and distribution of this software are permitted solely for personal, academic research, educational, or other non-commercial purposes.
+- **Commercial Use Prohibited**: **Any commercial use of this software, or any portion thereof (including modified versions), is strictly prohibited.** Commercial use includes, but is not limited to:
+  - Selling, leasing, or otherwise charging for the software or its derivatives.
+  - Using the software in commercial products, services, or internal enterprise operations to generate direct or indirect economic benefits.
+  - Offering this software as part of paid technical services, SaaS (Software as a Service), or commercial support.
+
+### 2. Commercial Licensing
+For any commercial application of this software, you must contact the author in advance and obtain explicit **written commercial authorization**.
+- **Contact**: You may contact the author by opening an Issue or Pull Request on the GitHub repository page, or through the contact information provided on the author's GitHub profile.
